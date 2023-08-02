@@ -89,6 +89,7 @@ const Protfolio = () => {
           key={project.id}
           className="max-w-6xl mx-auto my-5 rounded-3xl py-10 px-6 bg-gradient-to-r from-[#262626] to-[#151515] relative group shadow shadow-black"
         >
+          {
           {/* Project Video */}
           // <div
           //   className="w-full aspect-w-16 aspect-h-9 bg-[#1D1D1D] border border-white border-opacity-5 rounded-3xl overflow-hidden"
@@ -112,8 +113,9 @@ const Protfolio = () => {
           //     />
           //   )}
           // </div>
-
-          {/* Project Image */}
+      }
+            {/* Project Image */}
+          
           <div className="w-full aspect-w-16 aspect-h-9 bg-[#1D1D1D] border border-white border-opacity-5 rounded-3xl overflow-hidden">
             <img
               src={project.image}
