@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import YouTube from "react-youtube";
+// import YouTube from "react-youtube";
 import { FaYoutube, FaBehanceSquare } from "react-icons/fa";
 import icon from "../../assets/icon.svg";
 import projectImg1 from "../../assets/project1.png";
@@ -66,16 +66,17 @@ const Protfolio = () => {
     },
   ];
 
-  // Play video on mouse hover
-  const [videoHovered, setVideoHovered] = useState(null);
+  // // Play video on mouse hover
+  // const [videoHovered, setVideoHovered] = useState(null);
 
-  const handleVideoMouseEnter = (id) => {
-    setVideoHovered(id);
-  };
+  // const handleVideoMouseEnter = (id) => {
+  //   setVideoHovered(id);
+  // };
 
-  const handleVideoMouseLeave = () => {
-    setVideoHovered(null);
-  };
+  // const handleVideoMouseLeave = () => {
+  //   setVideoHovered(null);
+  // };
+
   return (
     <div className="max-w-6xl md:mx-auto mx-2">
       <div className="mt-10">
@@ -89,28 +90,28 @@ const Protfolio = () => {
           className="max-w-6xl mx-auto my-5 rounded-3xl py-10 px-6 bg-gradient-to-r from-[#262626] to-[#151515] relative group shadow shadow-black"
         >
           {/* Project Video */}
-          <div
-            className="w-full aspect-w-16 aspect-h-9 bg-[#1D1D1D] border border-white border-opacity-5 rounded-3xl overflow-hidden"
-            onMouseEnter={() => handleVideoMouseEnter(project.id)}
-            onMouseLeave={handleVideoMouseLeave}
-          >
-            {videoHovered === project.id ? (
-              <YouTube
-                videoId={project.serverLink} // Replace with the YouTube video ID
-                opts={{
-                  playerVars: {
-                    autoplay: 0, // Set to 1 if you want autoplay
-                  },
-                }}
-              />
-            ) : (
-              <img
-                src={project.image}
-                alt="project-cover"
-                className="object-cover w-full h-full"
-              />
-            )}
-          </div>
+          // <div
+          //   className="w-full aspect-w-16 aspect-h-9 bg-[#1D1D1D] border border-white border-opacity-5 rounded-3xl overflow-hidden"
+          //   onMouseEnter={() => handleVideoMouseEnter(project.id)}
+          //   onMouseLeave={handleVideoMouseLeave}
+          // >
+          //   {videoHovered === project.id ? (
+          //     <YouTube
+          //       videoId={project.serverLink} // Replace with the YouTube video ID
+          //       opts={{
+          //         playerVars: {
+          //           autoplay: 0, // Set to 1 if you want autoplay
+          //         },
+          //       }}
+          //     />
+          //   ) : (
+          //     <img
+          //       src={project.image}
+          //       alt="project-cover"
+          //       className="object-cover w-full h-full"
+          //     />
+          //   )}
+          // </div>
 
           {/* Project Image */}
           <div className="w-full aspect-w-16 aspect-h-9 bg-[#1D1D1D] border border-white border-opacity-5 rounded-3xl overflow-hidden">
