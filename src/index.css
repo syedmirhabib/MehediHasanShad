@@ -1,0 +1,47 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  transform-origin: 0%;
+  z-index: 100;
+}
+
+@keyframes changeColors {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.bg-gradient-to-r {
+  transition: background 0.5s ease;
+}
+
+.bg-gradient-to-r:hover {
+  background-position: right;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#animate-spin {
+  animation: spin 4s linear infinite;
+}
+
+/* .bg-gradient-to-r {
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
